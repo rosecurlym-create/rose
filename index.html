@@ -2,26 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rose Marie Meza Sibilia - Bienestar y Cuidado</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Tipografías más femeninas y elegantes: Cormorant Garamond y Quicksand -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-lila: #f5f3ff; /* Lila más etéreo */
-            --color-verde: #f0fdf4; /* Verde menta muy suave */
-            --color-celeste: #f0f9ff; /* Celeste nube */
-            --color-acent: #a78bfa; /* Morado suave para acentos */
+            --color-lila: #f5f3ff;
+            --color-verde: #f0fdf4;
+            --color-celeste: #f0f9ff;
+            --color-acent: #a78bfa;
         }
         
         body {
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(135deg, var(--color-celeste) 0%, var(--color-lila) 50%, var(--color-verde) 100%);
-            min-height: 100vh;
+            /* Forzamos que la altura sea exactamente la del dispositivo */
+            height: 100vh;
+            height: 100svh; /* Soporte para navegadores modernos con barras dinámicas */
+            overflow: hidden; /* Adiós al scroll */
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
         }
 
@@ -33,110 +36,102 @@
             background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 25px 50px -12px rgba(167, 139, 250, 0.15);
+            box-shadow: 0 15px 35px -10px rgba(167, 139, 250, 0.15);
         }
 
         .link-card {
-            transition: all 0.5s ease;
+            transition: all 0.4s ease;
             background: rgba(255, 255, 255, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .link-card:hover {
-            transform: translateY(-2px);
             background: rgba(255, 255, 255, 0.9);
             border-color: var(--color-acent);
-            box-shadow: 0 10px 20px -5px rgba(167, 139, 250, 0.2);
         }
 
         .icon-box {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 3.2rem;
-            height: 3.2rem;
-            border-radius: 50%; /* Iconos circulares para suavidad */
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
             color: white;
             flex-shrink: 0;
         }
+
+        /* Ajustes específicos para móviles muy pequeños */
+        @media (max-height: 670px) {
+            .profile-img { width: 100px; height: 100px; }
+            .name-title { font-size: 1.8rem; }
+            .main-container { padding: 1.25rem; }
+            .link-card { padding: 0.6rem; }
+        }
     </style>
 </head>
-<body class="p-6 sm:p-12">
+<body class="p-4">
 
-    <!-- Sección de Perfil -->
-    <div class="w-full max-w-md text-center mb-10 mt-4">
-        <div class="relative w-36 h-36 mx-auto mb-8">
-            <!-- Efecto decorativo suave detrás de la foto -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-purple-200 to-blue-200 rounded-full blur-2xl opacity-60"></div>
+    <!-- Sección de Perfil Compacta -->
+    <div class="w-full max-w-md text-center mb-6">
+        <div class="relative w-28 h-28 profile-img mx-auto mb-4">
+            <div class="absolute inset-0 bg-gradient-to-tr from-purple-200 to-blue-200 rounded-full blur-xl opacity-60"></div>
             <img src="https://ui-avatars.com/api/?name=Rose+Marie+Meza+Sibilia&background=ddd6fe&color=7c3aed&size=150" 
                  alt="Rose Marie Meza Sibilia" 
-                 class="relative rounded-full w-full h-full object-cover border-2 border-white shadow-2xl">
+                 class="relative rounded-full w-full h-full object-cover border-2 border-white shadow-xl">
         </div>
         
-        <h1 class="serif text-4xl font-semibold text-gray-800 mb-2 leading-tight">Rose Marie Meza Sibilia</h1>
-        <p class="text-[11px] uppercase tracking-[0.3em] text-purple-400 font-bold mb-4">Bienestar & Cuidado Integral</p>
-        <p class="serif text-xl italic text-gray-500 px-6">
+        <h1 class="serif text-3xl name-title font-semibold text-gray-800 mb-1 leading-tight">Rose Marie Meza Sibilia</h1>
+        <p class="text-[9px] uppercase tracking-[0.25em] text-purple-400 font-bold mb-2">Bienestar & Cuidado Integral</p>
+        <p class="serif text-lg italic text-gray-500 px-4">
             "English, Wellness and Self-Care"
         </p>
     </div>
 
     <!-- Contenedor Principal de Enlaces -->
-    <div class="w-full max-w-md main-container rounded-[3rem] p-8 space-y-5">
+    <div class="w-full max-w-md main-container rounded-[2.5rem] p-6 space-y-3">
         
-        <p class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Explora mi mundo</p>
-
         <!-- Instagram -->
-        <a href="https://instagram.com" target="_blank" class="link-card flex items-center p-4 rounded-full text-gray-800 group">
-            <div class="icon-box bg-gradient-to-br from-purple-300 to-pink-300 mr-4">
-                <i class="fab fa-instagram text-xl"></i>
+        <a href="https://instagram.com" target="_blank" class="link-card flex items-center p-3 rounded-full text-gray-800 group">
+            <div class="icon-box bg-gradient-to-br from-purple-300 to-pink-300 mr-3">
+                <i class="fab fa-instagram text-lg"></i>
             </div>
             <div class="flex-1">
-                <h2 class="font-semibold text-base">Instagram</h2>
-                <p class="text-[10px] text-gray-400 italic">Inspiración y autocuidado</p>
+                <h2 class="font-semibold text-sm">Instagram</h2>
+                <p class="text-[9px] text-gray-400 italic">Inspiración y autocuidado</p>
             </div>
-            <div class="pr-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <i class="fas fa-heart text-pink-300 text-xs"></i>
-            </div>
+            <i class="fas fa-chevron-right text-[10px] text-gray-300 pr-3"></i>
         </a>
 
         <!-- WhatsApp -->
-        <a href="https://wa.me/tu-numero" target="_blank" class="link-card flex items-center p-4 rounded-full text-gray-800 group">
-            <div class="icon-box bg-gradient-to-br from-green-200 to-emerald-300 mr-4">
-                <i class="fab fa-whatsapp text-xl"></i>
+        <a href="https://wa.me/tu-numero" target="_blank" class="link-card flex items-center p-3 rounded-full text-gray-800 group">
+            <div class="icon-box bg-gradient-to-br from-green-200 to-emerald-300 mr-3">
+                <i class="fab fa-whatsapp text-lg"></i>
             </div>
             <div class="flex-1">
-                <h2 class="font-semibold text-base">WhatsApp</h2>
-                <p class="text-[10px] text-gray-400 italic">Agendemos una sesión</p>
+                <h2 class="font-semibold text-sm">WhatsApp</h2>
+                <p class="text-[9px] text-gray-400 italic">Agendemos una sesión</p>
             </div>
-            <div class="pr-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <i class="fas fa-comment-heart text-emerald-300 text-xs"></i>
-            </div>
+            <i class="fas fa-chevron-right text-[10px] text-gray-300 pr-3"></i>
         </a>
 
         <!-- Página Web -->
-        <a href="https://tuweb.com" target="_blank" class="link-card flex items-center p-4 rounded-full text-gray-800 group">
-            <div class="icon-box bg-gradient-to-br from-sky-200 to-indigo-300 mr-4">
-                <i class="fas fa-star-of-life text-lg"></i>
+        <a href="https://tuweb.com" target="_blank" class="link-card flex items-center p-3 rounded-full text-gray-800 group">
+            <div class="icon-box bg-gradient-to-br from-sky-200 to-indigo-300 mr-3">
+                <i class="fas fa-star-of-life text-base"></i>
             </div>
             <div class="flex-1">
-                <h2 class="font-semibold text-base">Página Web</h2>
-                <p class="text-[10px] text-gray-400 italic">Mis servicios integrales</p>
+                <h2 class="font-semibold text-sm">Página Web</h2>
+                <p class="text-[9px] text-gray-400 italic">Mis servicios integrales</p>
             </div>
-            <div class="pr-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <i class="fas fa-sparkles text-indigo-300 text-xs"></i>
-            </div>
+            <i class="fas fa-chevron-right text-[10px] text-gray-300 pr-3"></i>
         </a>
 
     </div>
 
-    <!-- Footer -->
-    <footer class="mt-14 text-center">
-        <div class="flex justify-center space-x-6 mb-6 opacity-40">
-            <i class="fas fa-feather-alt text-gray-600"></i>
-            <i class="fas fa-sun text-yellow-500"></i>
-            <i class="fas fa-moon text-indigo-400"></i>
-        </div>
-        <p class="serif text-sm italic text-gray-400">
+    <!-- Footer Minimalista -->
+    <footer class="mt-8 text-center">
+        <p class="serif text-xs italic text-gray-400">
             &copy; 2025 — Rose Marie Meza Sibilia
         </p>
     </footer>
