@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Marie Meza Sibilia - Bienestar y Cuidado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tipografías más femeninas y elegantes: Cormorant Garamond y Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-lila: #f5f3ff; /* Lila más etéreo */
+            --color-verde: #f0fdf4; /* Verde menta muy suave */
+            --color-celeste: #f0f9ff; /* Celeste nube */
+            --color-acent: #a78bfa; /* Morado suave para acentos */
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, var(--color-celeste) 0%, var(--color-lila) 50%, var(--color-verde) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .main-container {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 25px 50px -12px rgba(167, 139, 250, 0.15);
+        }
+
+        .link-card {
+            transition: all 0.5s ease;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.9);
+            border-color: var(--color-acent);
+            box-shadow: 0 10px 20px -5px rgba(167, 139, 250, 0.2);
+        }
+
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%; /* Iconos circulares para suavidad */
+            color: white;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="p-6 sm:p-12">
+
+    <!-- Sección de Perfil -->
+    <div class="w-full max-w-md text-center mb-10 mt-4">
+        <div class="relative w-36 h-36 mx-auto mb-8">
+            <!-- Efecto decorativo suave detrás de la foto -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-purple-200 to-blue-200 rounded-full blur-2xl opacity-60"></div>
+            <img src="https://ui-avatars.com/api/?name=Rose+Marie+Meza+Sibilia&background=ddd6fe&color=7c3aed&size=150" 
+                 alt="Rose Marie Meza Sibilia" 
+                 class="relative rounded-full w-full h-full object-cover border-2 border-white shadow-2xl">
+        </div>
+        
+        <h1 class="serif text-4xl font-semibold text-gray-800 mb-2 leading-tight">Rose Marie Meza Sibilia</h1>
+        <p class="text-[11px] uppercase tracking-[0.3em] text-purple-400 font-bold mb-4">Bienestar & Cuidado Integral</p>
+        <p class="serif text-xl italic text-gray-500 px-6">
+            "English, Wellness and Self-Care"
+        </p>
+    </div>
+
+    <!-- Contenedor Principal de Enlaces -->
+    <div class="w-full max-w-md main-container rounded-[3rem] p-8 space-y-5">
+        
+        <p class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Explora mi mundo</p>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" class="link-card flex items-center p-4 rounded-full text-gray-800 group">
+            <div class="icon-box bg-gradient-to-br from-purple-300 to-pink-300 mr-4">
+                <i class="fab fa-instagram text-xl"></i>
+            </div>
+            <div class="flex-1">
+                <h2 class="font-semibold text-base">Instagram</h2>
+                <p class="text-[10px] text-gray-400 italic">Inspiración y autocuidado</p>
+            </div>
+            <div class="pr-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <i class="fas fa-heart text-pink-300 text-xs"></i>
+            </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/tu-numero" target="_blank" class="link-card flex items-center p-4 rounded-full text-gray-800 group">
+            <div class="icon-box bg-gradient-to-br from-green-200 to-emerald-300 mr-4">
+                <i class="fab fa-whatsapp text-xl"></i>
+            </div>
+            <div class="flex-1">
+                <h2 class="font-semibold text-base">WhatsApp</h2>
+                <p class="text-[10px] text-gray-400 italic">Agendemos una sesión</p>
+            </div>
+            <div class="pr-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <i class="fas fa-comment-heart text-emerald-300 text-xs"></i>
+            </div>
+        </a>
+
+        <!-- Página Web -->
+        <a href="https://tuweb.com" target="_blank" class="link-card flex items-center p-4 rounded-full text-gray-800 group">
+            <div class="icon-box bg-gradient-to-br from-sky-200 to-indigo-300 mr-4">
+                <i class="fas fa-star-of-life text-lg"></i>
+            </div>
+            <div class="flex-1">
+                <h2 class="font-semibold text-base">Página Web</h2>
+                <p class="text-[10px] text-gray-400 italic">Mis servicios integrales</p>
+            </div>
+            <div class="pr-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <i class="fas fa-sparkles text-indigo-300 text-xs"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-14 text-center">
+        <div class="flex justify-center space-x-6 mb-6 opacity-40">
+            <i class="fas fa-feather-alt text-gray-600"></i>
+            <i class="fas fa-sun text-yellow-500"></i>
+            <i class="fas fa-moon text-indigo-400"></i>
+        </div>
+        <p class="serif text-sm italic text-gray-400">
+            &copy; 2025 — Rose Marie Meza Sibilia
+        </p>
+    </footer>
+
+</body>
+</html>
